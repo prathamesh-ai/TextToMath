@@ -54,7 +54,8 @@ assistant_agent = initialize_agent(
     tools = [wikipedia_tool,calculator,reasoning_tool],
     llm=llm,
     agent = AgentType.ZERO_SHOT_REACT_DESCRIPTION,
-    verbose=False
+    verbose=False,
+    handle_parsing_error = True
 )
 
 if "messages" not in st.session_state:
